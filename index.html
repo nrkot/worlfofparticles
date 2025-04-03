@@ -1,0 +1,157 @@
+
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy of World Particles</title>
+    <link rel="stylesheet" href="c:\Users\Пользователь\Desktop\html\static\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="https://dynamic.design.com/asset/logo/cf0fe5bb-07ae-4230-8a3f-d304f48dfebf/logo-search-grid-1x?logoTemplateVersion=1&v=638753914481630000&text=world+of+particles">
+    <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head> 
+<body>
+    
+
+    {% block title %}Academy of World Particles{% endblock %}
+
+    {% block content %}
+    <header>
+        <div class="logo">
+            {% if g.user %}
+            <li>👋 Привет, {{ g.user.username }}!</li>
+            {% endif %}
+            <h1>World of Particles</h1>
+            <img class="logo-img" src="https://dynamic.design.com/asset/logo/cf0fe5bb-07ae-4230-8a3f-d304f48dfebf/logo-search-grid-1x?logoTemplateVersion=1&v=638753914481630000&text=world+of+particles" alt="Logo" width="150">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                {% else %}
+                    <li><a href="#pricing">payment</a></li>
+                {% endif %}
+                    <li><a href="https://alidlnrko.github.io/World-of-Particles-lessons-/">lectures</a></li>
+            </ul>
+        </nav>
+        <a href="{{ url_for('login') }}" class="btn">Log in</a>
+    </header>
+
+    <section class="welcome" id="welcome">
+        <h1>About Us and Our Educational Website</h1>
+        <p>We explore the fascinating world of quantum physics through interactive tutorials, lectures, and simulations. Join us on this journey!</p>
+        <a href="#" class="welcome_button">Learn More</a>
+        <img src="https://www.euroschoolindia.com/wp-content/uploads/2023/07/importance-of-education.jpg" alt="Education">
+    </section>
+    
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-box"><h3>Online Courses</h3><p>Learn physics, programming, and more.</p><a href="#">Learn More</a></div>
+            <div class="service-box"><h3>Exam Preparation</h3><p>Prepare for SAT, MEXT, and Olympiads.</p><a href="#">Learn More</a></div>
+            <div class="service-box"><h3>Personalized Lessons</h3><p>1-on-1 mentoring with experts.</p><a href="#">Learn More</a></div>
+            <div class="service-box"><h3>Scientific Research</h3><p>Support for physics and CS research.</p><a href="#">Learn More</a></div>
+        </div>
+    </section>
+    <section class="info">
+        <div class="info_text">
+            <h1>what will you learn in a year about quantum physics</h1>
+            <p>This year, you will embark on an exciting journey into the world of quantum physics! We will explore the fundamental principles of quantum mechanics, learn about wave functions, the uncertainty principle, entangled states, and quantum tunneling. Together, we will discover how quantum computers work, the essence of superposition, and how particles can exist in multiple states at once. This year will open new horizons in your understanding of the universe!
+            </p>
+            <p class="pip">We will also dive into the mysteries of quantum field theory, explore the fascinating world of virtual particles, and discuss the potential of quantum technologies in shaping the future. This year will open new horizons in your understanding of the universe!</p>
+
+            <img 
+                class="download_image"
+                src="https://cosmosmagazine.com/wp-content/uploads/2021/10/Einsteing-KillingPhysicsArtwork02-ORANGE.jpg" 
+                alt=""
+                width="500px"
+                height="300px">
+                
+        </div>
+    </section>
+</section>
+<section class="video">
+    <h1>Lectures of Quantum Physics</h1>
+    <div class="video-container">
+        <iframe width="560" height="315" class="videoid" 
+            src="https://www.youtube.com/embed/AG9gYu7-0xU?si=qiCFk4Hfx8dGUhsN" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <p class="video-description">
+            Discover the fundamentals of quantum physics in this engaging lecture. 
+            Learn about wave-particle duality, quantum entanglement, and the uncertainty principle.
+        </p>
+    </div>
+</section>
+
+    <section class="pricing">
+        <h2>Choose Your Plan</h2>
+        <div class="pricing-container">
+            <div class="pricing-card"><h3>Basic</h3>
+                <p>$9.99/month</p>
+                <a href="#"  class="btn-buy">Buy</a></div>
+            <div class="pricing-card popular">
+                <h3>Standard</h3><p>$19.99/month</p>
+                <a href="#" class="btn-buy">Buy</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Premium</h3>
+                <p>$29.99/month</p>
+                <a href="#" class="btn-buy">Buy</a></div>
+        </div>
+    </section>
+
+
+    <section class="contact-form" id="contact">
+        <h1>Contact Us</h1>
+        <form action="#" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Your username" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>World of Particles</h2>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#welcome">About Us</a></li>
+                    <li><a href="https://alidlnrko.github.io/world-of-particle/">Lectures</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="https://www.wavetransit.com/wp-content/uploads/2021/08/Facebook-logo.png" alt="Facebook" width="160px" height="100px"> </a>
+                <a href="#"><img src="https://images.vexels.com/content/137419/preview/twitter-icon-logo-25db10.png" alt="Twitter" width="100px" height="100px"></a>
+                <a href="#"><img src="https://www.omnicoreagency.com/wp-content/uploads/2018/09/Instagram-Logo-PNG-2018.png.webp" alt="Instagram" width="100px" height="100px"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 World of Particles. All rights reserved.</p>
+        </div>
+    </footer>
+    {% endblock %}
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".welcome", { opacity: 0, y: 50, duration: 1.5, scrollTrigger: { trigger: ".welcome", start: "top 80%" } });
+        gsap.from(".services-container", { opacity: 0, y: 50, duration: 1.5, scrollTrigger: { trigger: ".services", start: "top 90%" } });
+        gsap.from(".pricing-container", { opacity: 0, scale: 0.8, duration: 1.2, scrollTrigger: { trigger: ".pricing", start: "top 85%" } });
+        gsap.from(".footer",{opacity: 0, y: 50, duration: 1.5, scrollTrigger: { trigger: ".footer-links", start: "top 80%" }});
+    </script>
+</body>
+</html>
+

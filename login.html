@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+<h2>Log in</h2>
+<form method="POST">
+    <label for="username">username:</label>
+    <input type="text" id="username" name="username" required autocomplete="username">
+
+    <label for="password">password:</label>
+    <input type="password" id="password" name="password" required autocomplete="current-password">
+
+    <button type="submit">log in</button>
+</form>
+<p>not account? <a href="{{ url_for('register') }}">create new account</a></p>
+{% endblock %}

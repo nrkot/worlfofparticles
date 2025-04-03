@@ -1,0 +1,444 @@
+
+*{
+    font-family: "Duru Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+   
+}
+section {
+    position: relative;
+    padding: 60px 0;
+}
+
+section::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(to right, #000000, #a35acd);
+    margin: 40px auto;
+    border-radius: 5px;
+}
+
+header{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:35px 30px;
+    margin-bottom: 20px;
+    border-bottom: #000000 solid 2px;
+    color:rgb(0, 0, 0);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+.Logoimg{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    
+}
+
+nav a{
+    text-decoration: none;
+    color: black
+
+}
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav  a:hover {
+    color: #000000;
+}
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+nav ul li{
+    list-style: none;
+    display: flex;
+}
+.btn {
+    position: relative;
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: none;
+    border: #000000 3px solid;
+    border-radius: 25px;
+    background-image: linear-gradient(to left top, #240066, #340042, #2e0026, #200012, #000000);
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    width: 150px;
+    height: 50px; 
+}
+
+.btn::before {
+    content: "Log in";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(166,0,205,1) 63%, rgba(255,255,255,1) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+.welcome{
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+.welcome_header{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.welcome_text, .welcome_button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.welcome_button{
+    background-color: #9400e9;
+    background-image: linear-gradient(160deg, #000000 0%, #5f5f5f 100%);
+    margin-top: 20px;
+    display: inline-block;
+    padding: 20px 60px;
+    color: #fff;
+    border-radius: 55px;
+    transition: 300ms; 
+    position:absolute;
+    top: auto;
+    right: 500px 
+}
+
+.welcome_button:hover{
+    box-shadow: 0 0 25px 0 #242424;
+    color: #fff;
+    font-size: 25px;
+    
+}
+.welcome img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.services {
+    background-color: #000000;
+    text-align: center;
+    padding: 50px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-box i {
+    font-size: 40px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.service-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.service-box a {
+    text-decoration: none;
+    color: white;
+    background: #353535;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.service-box a:hover {
+    background: #a200ff;
+}
+.info{
+    padding: 60px;
+    justify-content: baseline;
+}
+.info_text h1{
+    text-align: center;
+    border-bottom: 2px black solid;
+}
+.info_text img{
+    display: flexbox;
+}
+.pip{
+    position:absolute;
+    top: auto;
+    left: 560px;
+    flex-direction: row-reverse;
+}
+.video {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: white
+    
+}
+.video h1{
+    border-bottom:white 2px solid;
+    margin: 16px;
+}
+.videoid{
+    border: rgb(55, 0, 71) solid 2px;
+    border-radius: 25px;
+}
+.videoid:hover{
+    box-shadow: 0px 0px 15px 5px rgb(201, 0, 174);
+    transition: 0.5s;  
+}
+.video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Отступ между видео и текстом */
+    max-width: 900px;
+    margin: auto;
+    
+}
+.video-description {
+    max-width: 300px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: left;
+}
+.pricing {
+    text-align: center;
+    padding: 50px;
+    background: #f9f9f9;
+}
+
+.pricing h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.popular {
+    border: 2px solid #4b0069;
+}
+
+.pricing-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #701088;
+    margin-bottom: 10px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.pricing-card ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.btn-buy {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6b0079;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #9b00ca;
+}
+
+.box{
+    width: 100px; height: 100px;
+    background: rgb(102, 6, 102); position: absolute;
+    top: 50%; left: 10px; transform: translateY(-50%);
+}
+.box2{
+    width: 100px; height: 100px;
+    background: rgb(102, 6, 102); position: absolute;
+    top: 50%; left: 10px; transform: translateY(-50%);
+}
+.box3{
+    width: 100px; height: 100px;
+    background: rgb(102, 6, 102); position: absolute;
+    top: 50%; left: 10px; transform: translateY(-50%);
+}
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: linear-gradient(45deg, #ff0000, #ff7300);
+    z-index: 1000;
+}
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a img {
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+
